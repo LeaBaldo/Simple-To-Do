@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Simple-To-Do/static/css/main.45d32ef8.css",
+    "main.js": "/Simple-To-Do/static/js/main.07665c28.js",
+    "index.html": "/Simple-To-Do/index.html",
+    "static/media/deleteSVG.svg": "/Simple-To-Do/static/media/deleteSVG.7547ed76b90d5776991c702ed4c38e65.svg",
+    "static/media/checkSVG.svg": "/Simple-To-Do/static/media/checkSVG.a9423def4c7e9f1d791c832b06b33ee6.svg",
+    "main.45d32ef8.css.map": "/Simple-To-Do/static/css/main.45d32ef8.css.map",
+    "main.07665c28.js.map": "/Simple-To-Do/static/js/main.07665c28.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45d32ef8.css",
+    "static/js/main.07665c28.js"
+  ]
+}
