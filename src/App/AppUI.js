@@ -22,6 +22,7 @@ function AppUI() {
     deleteTodo,
     openModal,
     setOpenModal,
+    totalTodos,
   } = React.useContext(TodoContext);
 
   return (
@@ -32,10 +33,10 @@ function AppUI() {
       <TodoList>
         {error && <TodosError error={error} />}
         {loading && <TodosLoading />}
-        {(!loading && !searchedTodos.length) && <EmptyTodos />}
-
+        {((!loading && !searchedTodos.length) && (totalTodos !== 0)) && <p>No se han encontrado To-Dos, intenta con otra palabra clave.</p>}
+        {(!loading && totalTodos === 0) && <EmptyTodos /> }
         {searchedTodos.map(todo => (
-          <TodoItem
+          <TodoItem 
             key={todo.text}
             text={todo.text}
             completed={todo.completed}
