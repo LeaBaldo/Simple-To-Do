@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoContext } from '../TodoContex';
+import { TodoContext } from '../TodoContext';
 import { TodoCounter } from '../TodoCounter/index.js';
 import { TodoSearch } from '../TodoSearch/index.js';
 import { TodoList } from '../TodoList/index.js';
@@ -33,7 +33,7 @@ function AppUI() {
       <TodoList>
         {error && <TodosError error={error} />}
         {loading && <TodosLoading />}
-        {((!loading && !searchedTodos.length) && (totalTodos !== 0)) && <p>No se han encontrado To-Dos, intenta con otra palabra clave.</p>}
+        {((!loading && !searchedTodos.length) && (totalTodos !== 0)) && <p className="EmptyTodos">No se han encontrado To-Dos, intenta con otra palabra clave.</p>}
         {(!loading && totalTodos === 0) && <EmptyTodos /> }
         {searchedTodos.map(todo => (
           <TodoItem 

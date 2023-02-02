@@ -1,5 +1,5 @@
 import React from "react";
-import { TodoContext } from "../TodoContex";
+import { TodoContext } from "../TodoContext";
 import './TodoForm.css'
 
 function TodoForm() {
@@ -7,6 +7,8 @@ function TodoForm() {
     const {
         addTodo,
         setOpenModal,
+        // searchSameTodo,
+        // todos,'
     } = React.useContext(TodoContext);
 
     const onChange = (event) => {
@@ -17,8 +19,17 @@ function TodoForm() {
     };
     const onSubmit = (event) => {
         event.preventDefault();
+
+        // if(!searchSameTodo(newTodoValue)){
+        //     console.log(typeof searchSameTodo(newTodoValue))
+        //     alert("Ya existe un To-Do igual con ese mismo contenido.");
+        // } else {
+        //     addTodo(newTodoValue);
+        //     setOpenModal(false);
+        // }
         addTodo(newTodoValue);
         setOpenModal(false);
+
     };
     
     return (
@@ -31,7 +42,6 @@ function TodoForm() {
                 placeholder="To Do..."
                 autoFocus
                 required
-                
             />
             <div className="TodoForm-buttonContainer">
                 <button

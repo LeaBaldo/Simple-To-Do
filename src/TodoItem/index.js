@@ -13,6 +13,7 @@ function TodoItem(props) {
     // }
 
     return (
+      
         <li className="TodoItem">
             <CompleteIcon
               completed={props.completed}
